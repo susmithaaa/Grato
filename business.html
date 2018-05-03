@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title> Reviews </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/settings.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/settings.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/dashboard.css">
+	<script type="text/javascript" src="./js/canvasjs.min.js"></script>
+	<script type="text/javascript" src="./js/profile.js"></script>
+	<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+	 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Month', 'Reviews'],
+          ['Jan',  50],
+          ['Feb',  50],
+          ['Mar',  100],
+          ['Apr',  200]
+        ]);
+
+        var options = {
+          title: 'Rating Distribution for year 2016',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+
+
+        var data1 = google.visualization.arrayToDataTable([
+          ['Year', 'Ratings'],
+          ['2014',     11],
+          ['2015',      2],
+          ['2016',  2],
+          ['2017', 2],
+          ['2018',    7]
+        ]);
+
+        var options1 = {
+          title: 'Rating Distribution by Year'
+        };
+
+        var chart1 = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart1.draw(data1, options1);
+      }
+    </script>
+</head>
+
+<body>
+
+	<div class="col-md-12 col-xs-12 col-sm-12">
+
+		<div class="row">
+			<div class="col-md-12 col-xs-12 col-sm-12">
+				<nav class="navbar navbar-absolute navbar-default">
+
+					<div class="container">
+
+						<div class="navbar-header">
+							<a href="./dashboardPage.html" class="navbar-left navbar-brand"><img src="img/logo.jpg" height="30px"></a>
+						</div>
+
+						<div>
+							<ul class="nav navbar-nav">
+								<li> <a href="#"> Restaurants </a> </li>
+								<li> <a href="#"> Night Life </a> </li>
+								<li> <a href="#"> Shopping </a> </li>
+								<li> <a href="#"> More </a> </li>
+							</ul> 
+
+							<form class="navbar-form navbar-left" id="navbar-form">
+								<div class="form-group">
+
+									<div class="input-group col-xs-9 col-sm-9">
+										<input type="text" class="form-control" placeholder="Find" aria-describedby="basic-addon1">
+
+										<span class="input-group-addon" id="basic-addon1">
+											<a href="#">
+												<span class="glyphicon glyphicon-search"></span>
+											</a>
+										</span>
+									</div>
+								</div>
+							</form>
+
+							<ul class="nav navbar-nav navbar-right">
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+										Shubham Agiwal<span class="caret" style="color:white"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="./profilePage.html">About Me</a></li>
+										<li><a href="./settings.html">Settings</a></li>
+										<li><a href="./loginPage.html">Log out</a></li>
+									</ul>
+								</li>
+							</ul> 
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4 col-xs-12 col-sm-12">
+				<h1> Chipotele</h1>
+			</div>
+
+			<div class=" col-md-offset-2 col-md-2 col-xs-12 col-sm-7">
+				<a href="./writeReview.html">
+					<h1>
+						<button type="submit" class="btn btn-success btn-lg">
+							<span class="glyphicon glyphicon-star"></span>
+							Write a Review
+						</button>
+					</h1>
+				</a>
+			</div>
+
+			<div class="col-md-2 col-md-offset-1 col-xs-12 col-sm-offset-1 col-sm-4">
+				<a href="#">
+					<h1>
+						<button type="submit" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+							<i class="fa fa-bar-chart" aria-hidden="true"></i>
+							Ratings distribution
+						</button>
+					</h1>
+				</a>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div class=" col-md-5 col-xs-12 col-sm-12">
+				<i class="fa fa-border fa-star fa-2x" aria-hidden="true"></i>
+				<i class="fa fa-border fa-star fa-2x" aria-hidden="true"></i>
+				<i class="fa fa-border fa-star fa-2x" aria-hidden="true"></i>
+				<i class="fa fa-border fa-star fa-2x" aria-hidden="true"></i>
+				<i class="fa fa-border fa-star fa-2x" aria-hidden="true"></i>
+				832 Reviews
+			</div>	
+		</div>
+
+		<br>
+		<div class="row">
+			<div class="col-md-5 col-xs-12 col-sm-12">
+				<i class="fa fa-border fa-usd fa-lg" aria-hidden="true"></i>
+				<i class="fa fa-border fa-usd fa-lg" aria-hidden="true"></i>
+				<i class="fa fa-border fa-usd fa-lg" aria-hidden="true"></i>
+				<i class="fa fa-border fa-usd fa-lg " aria-hidden="true"></i>
+				Steakhouses, Japanese, Cocktail Bars
+			</div>	
+		</div>
+
+		<br>
+
+		<div class="row">
+			<div class="col-md-5 col-xs-12 col-sm-12">
+				<div class="panel panel-info">
+					<div class="panel-heading" style="text-align:center">Details</div>
+					<div class="panel-body">
+						<i class="fa  fa-map-marker fa-lg " aria-hidden="true"></i>
+						801 Montgomery St San Francisco, CA 94133	b/t Jackson St & Gold St Financial District
+						<br>
+						<br>
+						<i class="fa fa-mobile-phone fa-lg " aria-hidden="true"></i>
+						3528714416
+						<br>
+						<br>
+						<i class="fa fa-location-arrow fa-lg " aria-hidden="true"></i>
+						<a href="#"> www.google.com </a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-offset-1 col-md-5 col-xs-12 col-sm-12">
+				<div class="text-center">
+					<img src="./img/splash_background_img_2.jpg" class="img-thumbnail">
+				</div>
+			</div>	
+		</div>
+
+		<div class="row">
+			<div class="col-md-8 col-xs-12 col-sm-12">
+				<div class="text-left" style="font-size:20px"><b>Recommended Reviews for Chipotale</b></div>
+				
+				<div class="form-group form-inline col-md-6 col-xs-12 col-sm-12">
+					<div class="dropdown">
+  								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">SORT
+ 							    <span class="caret"></span></button>
+  								<ul class="dropdown-menu">
+    								<li><a href="#">Newest First</a></li>
+    								<li><a href="#">Oldest First</a></li>
+    								<li><a href="#">Highest Rated</a></li>
+    								<li><a href="#">Lowest Rated</a></li>
+ 							    </ul>
+				    </div>
+				</div>
+
+				<div class="form-group form-inline">
+
+					<div class="input-group col-md-6 col-xs-6 col-sm-6">
+						<input type="text" class="form-control" placeholder="Find" aria-describedby="basic-addon1">
+
+						<span class="input-group-addon" id="basic-addon1">
+							<a href="#">
+								<span class="glyphicon glyphicon-search"></span>
+							</a>
+						</span>
+					</div>
+				</div>
+
+				
+
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-body">
+
+							<div class="col-md-4">
+								<img src="img/dashboard_1.jpeg" width="60px" height="60px" class="pull-left" style="margin: 0px 20px" align="middle" class="img-responsive">
+								<b><a href="./profilePage.html">Shubham Agiwal</a></b>
+								<br>
+								<i class="fa fa-star-o fa-lg"></i><b>392 reviews</b>
+								<br>
+								<b>Washington,DC</b>
+							</div>
+
+							<div class="col-md-8">
+								<br>
+								<i class="fa fa-border fa-star" aria-hidden="true"></i>
+								<i class="fa fa-border fa-star" aria-hidden="true"></i>
+								<i class="fa fa-border fa-star" aria-hidden="true"></i>
+								<i class="fa fa-border fa-star" aria-hidden="true"></i>
+								<i class="fa fa-border fa-star" aria-hidden="true"></i>
+								<b>Date:</b>02/14/2017
+								<br>
+
+								<div class="text-justify">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis purus mauris, ut efficitur est varius at. Nullam convallis consequat accumsan. Curabitur eu velit efficitur, ultricies risus ut, vehicula velit. Aenean dignissim arcu at eros porttitor, id dictum tortor porta. Maecenas nulla mi, iaculis vel nibh ut, dignissim ultrices justo. Mauris luctus sit amet lectus vel maximus. Nam scelerisque magna eget tortor egestas, iaculis consectetur purus ultrices. Donec blandit lectus sit amet purus ultricies consequat. Maecenas facilisis massa egestas, efficitur risus eu, hendrerit purus. Nunc pharetra dui nec magna sollicitudin vulputate. Maecenas ullamcorper eros vitae nibh porttitor fringilla. Mauris nisi nunc, finibus sed volutpat facilisis, rhoncus et augue. Vestibulum condimentum turpis tempor, blandit dolor ac, congue ligula. Vivamus commodo, turpis eget venenatis viverra, lorem lectus aliquet neque, ut faucibus sapien risus vestibulum felis. Nam lacinia sodales dolor, et congue nulla lacinia quis. Maecenas rutrum pellentesque ultrices.
+
+									Duis eros nibh, porta vel nulla id, aliquet mollis felis. Proin ac purus ut odio imperdiet semper. Ut ac fringilla lacus. Nulla facilisi. Duis eget ipsum ullamcorper turpis pellentesque imperdiet vitae in odio. Nulla volutpat finibus augue, nec pretium libero dignissim sit amet. Ut quam ipsum, porttitor ac metus ultrices, vestibulum elementum nunc. Nam eget sem mi. Aliquam ultricies eleifend diam, eget tincidunt nunc venenatis sit amet. Duis quis tellus gravida, gravida leo eu, accumsan tellus.
+
+									Nullam venenatis odio elit, vitae dignissim nisi venenatis quis. Duis a ligula eget tortor scelerisque pretium id nec diam. Aenean lorem metus, molestie at odio vitae, porta luctus leo. Nam sit amet nibh nibh. Quisque scelerisque, libero vel semper sollicitudin, augue nisl sodales mi, non mollis turpis quam rutrum dolor. Aliquam nibh lectus, fringilla tincidunt arcu at, porttitor porta urna. Pellentesque lobortis turpis non mi rutrum, quis lobortis lectus aliquet. In sit amet lectus id lacus sollicitudin rutrum. Maecenas luctus metus eget est lacinia, nec sollicitudin lectus eleifend. Aliquam vitae orci scelerisque nulla pharetra vestibulum quis ut lorem. Nunc molestie nibh eu sem efficitur accumsan. Quisque rhoncus venenatis dolor, eget lacinia orci rutrum id.
+
+									Ut pretium odio quis libero pulvinar tincidunt at ut purus. Mauris auctor metus nec eros sollicitudin facilisis. Quisque iaculis pellentesque nunc, in tincidunt velit varius et. Vivamus hendrerit diam ipsum, id accumsan sapien lacinia quis. Duis facilisis eleifend sapien a bibendum. Etiam at leo sem. Praesent at magna id enim ornare lacinia id ut odio. Sed accumsan lectus felis, ac tempus urna ultricies in. Fusce nec massa augue. Curabitur rutrum dignissim enim.
+
+									Phasellus rutrum a tortor ac ultrices. Nullam sapien est, luctus varius tellus ac, interdum eleifend dolor. Praesent a leo ultrices, efficitur nibh sed, ullamcorper sem. Curabitur massa ex, eleifend ut lorem vestibulum, consequat lobortis purus. Donec vestibulum accumsan ante, ac tristique dui semper eget. Mauris id elit eget felis accumsan pretium. In et orci nec mauris vestibulum tempor ut sit amet purus.
+
+								</div>
+
+								
+							</div>
+
+						</div>
+
+					</div>
+					<div class="panel panel-default">
+						<div class="panel panel-default">
+							<div class="panel-body">
+
+								<div class="col-md-4">
+									<img src="img/dashboard_1.jpeg" width="60px" height="60px" class="pull-left" style="margin: 0px 20px" align="middle" class="img-responsive">
+									<b><a href="./profilePage.html">Shubham Agiwal</a></b>
+									<br>
+									<i class="fa fa-star-o fa-lg"></i><b>392 reviews</b>
+									<br>
+									<b>Washington,DC</b>
+								</div>
+
+								<div class="col-md-8">
+									<br>
+									<i class="fa fa-border fa-star" aria-hidden="true"></i>
+									<i class="fa fa-border fa-star" aria-hidden="true"></i>
+									<i class="fa fa-border fa-star" aria-hidden="true"></i>
+									<i class="fa fa-border fa-star" aria-hidden="true"></i>
+									<i class="fa fa-border fa-star" aria-hidden="true"></i>
+									<b>Date:</b>02/14/2017
+									<br>
+
+									<div class="text-justify">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis purus mauris, ut efficitur est varius at. Nullam convallis consequat accumsan. Curabitur eu velit efficitur, ultricies risus ut, vehicula velit. Aenean dignissim arcu at eros porttitor, id dictum tortor porta. Maecenas nulla mi, iaculis vel nibh ut, dignissim ultrices justo. Mauris luctus sit amet lectus vel maximus. Nam scelerisque magna eget tortor egestas, iaculis consectetur purus ultrices. Donec blandit lectus sit amet purus ultricies consequat. Maecenas facilisis massa egestas, efficitur risus eu, hendrerit purus. Nunc pharetra dui nec magna sollicitudin vulputate. Maecenas ullamcorper eros vitae nibh porttitor fringilla. Mauris nisi nunc, finibus sed volutpat facilisis, rhoncus et augue. Vestibulum condimentum turpis tempor, blandit dolor ac, congue ligula. Vivamus commodo, turpis eget venenatis viverra, lorem lectus aliquet neque, ut faucibus sapien risus vestibulum felis. Nam lacinia sodales dolor, et congue nulla lacinia quis. Maecenas rutrum pellentesque ultrices.
+
+										Duis eros nibh, porta vel nulla id, aliquet mollis felis. Proin ac purus ut odio imperdiet semper. Ut ac fringilla lacus. Nulla facilisi. Duis eget ipsum ullamcorper turpis pellentesque imperdiet vitae in odio. Nulla volutpat finibus augue, nec pretium libero dignissim sit amet. Ut quam ipsum, porttitor ac metus ultrices, vestibulum elementum nunc. Nam eget sem mi. Aliquam ultricies eleifend diam, eget tincidunt nunc venenatis sit amet. Duis quis tellus gravida, gravida leo eu, accumsan tellus.
+
+										Nullam venenatis odio elit, vitae dignissim nisi venenatis quis. Duis a ligula eget tortor scelerisque pretium id nec diam. Aenean lorem metus, molestie at odio vitae, porta luctus leo. Nam sit amet nibh nibh. Quisque scelerisque, libero vel semper sollicitudin, augue nisl sodales mi, non mollis turpis quam rutrum dolor. Aliquam nibh lectus, fringilla tincidunt arcu at, porttitor porta urna. Pellentesque lobortis turpis non mi rutrum, quis lobortis lectus aliquet. In sit amet lectus id lacus sollicitudin rutrum. Maecenas luctus metus eget est lacinia, nec sollicitudin lectus eleifend. Aliquam vitae orci scelerisque nulla pharetra vestibulum quis ut lorem. Nunc molestie nibh eu sem efficitur accumsan. Quisque rhoncus venenatis dolor, eget lacinia orci rutrum id.
+
+										Ut pretium odio quis libero pulvinar tincidunt at ut purus. Mauris auctor metus nec eros sollicitudin facilisis. Quisque iaculis pellentesque nunc, in tincidunt velit varius et. Vivamus hendrerit diam ipsum, id accumsan sapien lacinia quis. Duis facilisis eleifend sapien a bibendum. Etiam at leo sem. Praesent at magna id enim ornare lacinia id ut odio. Sed accumsan lectus felis, ac tempus urna ultricies in. Fusce nec massa augue. Curabitur rutrum dignissim enim.
+
+										Phasellus rutrum a tortor ac ultrices. Nullam sapien est, luctus varius tellus ac, interdum eleifend dolor. Praesent a leo ultrices, efficitur nibh sed, ullamcorper sem. Curabitur massa ex, eleifend ut lorem vestibulum, consequat lobortis purus. Donec vestibulum accumsan ante, ac tristique dui semper eget. Mauris id elit eget felis accumsan pretium. In et orci nec mauris vestibulum tempor ut sit amet purus.
+
+									</div>
+									
+
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel panel-default">
+							<div class="panel-body">
+
+								<div class="col-md-4">
+									<img src="img/dashboard_1.jpeg" width="60px" height="60px" class="pull-left" style="margin: 0px 20px" align="middle" class="img-responsive">
+									<b><a href="./profilePage.html">Shubham Agiwal</a></b>
+									<br>
+									<i class="fa fa-star-o fa-lg"></i><b>392 reviews</b>
+									<br>
+									<b>Washington,DC</b>
+								</div>
+
+								<div class="col-md-8">
+									<br>
+									<i class="fa fa-border fa-star" aria-hidden="true"></i>
+									<i class="fa fa-border fa-star" aria-hidden="true"></i>
+									<i class="fa fa-border fa-star" aria-hidden="true"></i>
+									<i class="fa fa-border fa-star" aria-hidden="true"></i>
+									<i class="fa fa-border fa-star" aria-hidden="true"></i>
+									<b>Date:</b>02/14/2017
+									<br>
+
+									<div class="text-justify">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis purus mauris, ut efficitur est varius at. Nullam convallis consequat accumsan. Curabitur eu velit efficitur, ultricies risus ut, vehicula velit. Aenean dignissim arcu at eros porttitor, id dictum tortor porta. Maecenas nulla mi, iaculis vel nibh ut, dignissim ultrices justo. Mauris luctus sit amet lectus vel maximus. Nam scelerisque magna eget tortor egestas, iaculis consectetur purus ultrices. Donec blandit lectus sit amet purus ultricies consequat. Maecenas facilisis massa egestas, efficitur risus eu, hendrerit purus. Nunc pharetra dui nec magna sollicitudin vulputate. Maecenas ullamcorper eros vitae nibh porttitor fringilla. Mauris nisi nunc, finibus sed volutpat facilisis, rhoncus et augue. Vestibulum condimentum turpis tempor, blandit dolor ac, congue ligula. Vivamus commodo, turpis eget venenatis viverra, lorem lectus aliquet neque, ut faucibus sapien risus vestibulum felis. Nam lacinia sodales dolor, et congue nulla lacinia quis. Maecenas rutrum pellentesque ultrices.
+
+										Duis eros nibh, porta vel nulla id, aliquet mollis felis. Proin ac purus ut odio imperdiet semper. Ut ac fringilla lacus. Nulla facilisi. Duis eget ipsum ullamcorper turpis pellentesque imperdiet vitae in odio. Nulla volutpat finibus augue, nec pretium libero dignissim sit amet. Ut quam ipsum, porttitor ac metus ultrices, vestibulum elementum nunc. Nam eget sem mi. Aliquam ultricies eleifend diam, eget tincidunt nunc venenatis sit amet. Duis quis tellus gravida, gravida leo eu, accumsan tellus.
+
+										Nullam venenatis odio elit, vitae dignissim nisi venenatis quis. Duis a ligula eget tortor scelerisque pretium id nec diam. Aenean lorem metus, molestie at odio vitae, porta luctus leo. Nam sit amet nibh nibh. Quisque scelerisque, libero vel semper sollicitudin, augue nisl sodales mi, non mollis turpis quam rutrum dolor. Aliquam nibh lectus, fringilla tincidunt arcu at, porttitor porta urna. Pellentesque lobortis turpis non mi rutrum, quis lobortis lectus aliquet. In sit amet lectus id lacus sollicitudin rutrum. Maecenas luctus metus eget est lacinia, nec sollicitudin lectus eleifend. Aliquam vitae orci scelerisque nulla pharetra vestibulum quis ut lorem. Nunc molestie nibh eu sem efficitur accumsan. Quisque rhoncus venenatis dolor, eget lacinia orci rutrum id.
+
+										Ut pretium odio quis libero pulvinar tincidunt at ut purus. Mauris auctor metus nec eros sollicitudin facilisis. Quisque iaculis pellentesque nunc, in tincidunt velit varius et. Vivamus hendrerit diam ipsum, id accumsan sapien lacinia quis. Duis facilisis eleifend sapien a bibendum. Etiam at leo sem. Praesent at magna id enim ornare lacinia id ut odio. Sed accumsan lectus felis, ac tempus urna ultricies in. Fusce nec massa augue. Curabitur rutrum dignissim enim.
+
+										Phasellus rutrum a tortor ac ultrices. Nullam sapien est, luctus varius tellus ac, interdum eleifend dolor. Praesent a leo ultrices, efficitur nibh sed, ullamcorper sem. Curabitur massa ex, eleifend ut lorem vestibulum, consequat lobortis purus. Donec vestibulum accumsan ante, ac tristique dui semper eget. Mauris id elit eget felis accumsan pretium. In et orci nec mauris vestibulum tempor ut sit amet purus.
+
+									</div>
+									
+
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<nav class="text-center" aria-label="Page navigation">
+					<ul class="pagination">
+						<li>
+							<a href="#" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li>
+							<a href="#" aria-label="Next">
+								<span aria-hidden="true">&raquo;</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+
+			</div>
+			<br>
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading text-center">More business info</div>
+					<div class="panel-body">
+							
+					<b>Takes Reservations:</b> No
+					<br>
+					<br>
+					<b>Delivery:</b> No
+					<br>
+					<br>
+					<b>Take-out:</b> Yes
+					<br>
+					<br>
+					<b>Accepts Credit Cards:</b> Yes
+					<br>
+					<br>
+					<b>Takes Reservations:</b> No
+					<br>
+					<br>
+					<b>Delivery:</b> No
+					<br>
+					<br>
+					<b>Take-out:</b> Yes
+					<br>
+					<br>
+					<b>Accepts Credit Cards:</b> Yes
+					<br>
+					<br>
+					</div>
+				</div>
+			</div>
+
+			<br>
+			<br>
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading text-center">First Reviewer</div>
+					<div class="panel-body">
+					<img src="img/dashboard_1.jpeg" width="60px" height="60px" class="pull-left" style="margin: 0px 20px" align="middle" class="img-responsive">
+					<b><a href="./profilePage.html">Shubham Agiwal</a></b>
+					<br>
+					<i class="fa fa-star-o fa-lg"></i><b>392 Reviews</b>
+					</div>
+			   </div>			   
+			</div>
+
+		</div>
+
+	</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog" style="width:40%;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Rating Distribution</h4>
+        </div>
+        <div class="modal-body">
+         <div id="curve_chart"></div>
+         <div id="piechart"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+	</body>
+
+
+	</html>

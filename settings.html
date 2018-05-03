@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Settings Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="./css/settings.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+   <script type="text/javascript" src="./js/settings.js"></script>
+</head>
+
+<body>
+   <div>
+   	<div class="row">
+   		<div class="col-md-12 col-xs-12 col-sm-12">
+   			<nav class="navbar navbar-absolute navbar-default">
+
+               <div class="container-fluid">
+
+                  <div class="navbar-header">
+                     <a href="./dashboardPage.html" class="navbar-left navbar-brand"><img src="img/logo.jpg" height="30px"></a>
+                  </div>
+
+                  <div>
+
+                     <ul class="nav navbar-nav">
+                        <li> <a href="#"> Restaurants </a> </li>
+                        <li> <a href="#"> Night Life </a> </li>
+                        <li> <a href="#"> Shopping </a> </li>
+                        <li> <a href="#"> More </a> </li>
+                     </ul> 
+
+                     <form class="navbar-form navbar-left" id="navbar-form">
+                        <div class="form-group">
+
+                           <div class="input-group">
+                              <input type="text" class="form-control" placeholder="Find" aria-describedby="basic-addon1">
+
+                              <span class="input-group-addon" id="basic-addon1">
+                                 <a href="#">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                 </a>
+                              </span>
+                           </div>
+                        </div>
+                     </form>
+
+                     <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                             Shubham Agiwal<span class="caret" style="color:white"></span>
+                          </a>
+                          <ul class="dropdown-menu">
+                           <li><a href="./profilePage.html">About Me</a></li>
+                           <li><a href="./settings.html">Settings</a></li>
+                           <li><a href="./loginPage.html">Log out</a></li>
+                        </ul>
+                     </li>
+                  </ul> 
+
+               </div>
+            </div>
+         </nav>
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+         <div class="panel panel-info">
+            <div class="panel-heading" style="text-align:center" > Profile Update</div>
+            <div class="panel-body">
+
+              <img src="./img/shubhamagiwalPic.jpg" class="img-responsive center-block" width="100px" height="100px">
+              <form role="login-form">
+               <div class="form-group">
+                  <label for="Email"> Email</label>
+                  <input type="text" class="form-control" placeholder="shubhamagiwal@gmail.com" name="email"type="email" disabled>
+               </div>
+
+               <div class="form-group">
+                  <label for="FirstName"> First Name</label>
+                  <input type="text" class="form-control" placeholder="Shubham" name="First Name"type="first_name">
+               </div>
+
+               <div class="form-group">
+                  <label for="LastName"> Last Name</label>
+                  <input type="text" class="form-control" placeholder="Agiwal" name="email" type="last_name" >
+               </div>
+
+               <div class="form-group">
+                  <label for="City"> City </label>       
+                  <select class="form-control" name="city" id="city-name">
+                   <option></option>
+                   <option>Edinburgh</option>
+                   <option>Karlsruhe</option>
+                   <option>Montreal</option>
+                   <option>Waterloo</option>
+                   <option>Pittsburgh</option>
+                   <option>Charlotte</option>
+                   <option>Urbana-Champaign</option>
+                   <option>Phoenix</option>
+                   <option>Las Vegas</option>
+                   <option>Madison</option>
+                   <option>Cleveland</option>
+                </select>
+             </div>
+
+             <div class="form-group">
+                <label for="Country"> Country </label>
+                <select class="form-control" name="Country" id="country-name">
+                   <option></option>
+                   <option>U.K</option>
+                   <option>Germany</option>
+                   <option>Canada</option>
+                   <option>US</option>
+                </select>
+             </div>
+
+             <div class="form-group" style="text-align:center">
+              <input type="submit" value="Save Changes" class="btn btn-lg btn-success" >
+              <input type="submit" value="Cancel" class="btn btn-lg btn-danger" >
+           </div>
+        </form>
+
+     </div>
+  </div>
+</div>
+
+<div class="col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+   <div class="panel panel-info">
+      <div class="panel-heading" style="text-align:center" > Change password </div>
+      <div class="panel-body">
+        <form role="login-form">
+         <div class="form-group">
+          <label for="Change Password"> New Password </label>
+          <input type="password" class="form-control" placeholder="******" name="password" type="passwors" >
+       </div>
+       <div class="form-group">
+         <label for="Change Password"> Confirm Password </label>
+         <input type="password" class="form-control" placeholder="******" name="password" type="passwors" >
+      </div>
+       <div class="form-group" style="text-align:center">
+                <input type="submit" value="Save Changes" class="btn btn-lg btn-success" >
+                <input type="submit" value="Cancel" class="btn btn-lg btn-danger" >
+             </div>
+   </form>
+
+
+</div>
+
+</div>
+</div>
+
+</div> 
+</div>
+</body>
+
+</html>

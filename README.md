@@ -1,2 +1,2 @@
-# Grato
-Crowd sourcing rating and reviews of local restuarents
+# Glocal
+DBMS-Project-UF-2017

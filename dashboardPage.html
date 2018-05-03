@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Dashboard Page </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="./css/dashboard.css">
+
+</head>
+
+<body>
+	
+	<div class="row">
+		<div class="col-md-12 col-xs-12 col-sm-12 img-responsive" id="dashboard-container">
+
+			<nav class="navbar navbar-fixed-top navbar-absolute" >
+				<div class="container-fluid">
+
+					<!-- <ul class="nav navbar-nav">
+						<li class="active" id="dashboard-navbar">
+							<a href="#" class="dashboard-link"> Restaurants </a>
+						</li>
+
+						<li id="dashboard-navbar">
+							<a href="#" class="dashboard-link"> Night Life </a>
+						</li>
+
+						<li id="dashboard-navbar">
+							<a href="#" class="dashboard-link"> Home Services </a>
+						</li>
+					</ul> -->
+
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown dashboard-navbar">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								<!-- The Profile picture inserted via div class below, with shaping provided by Bootstrap -->
+								<div class="profile-img dashboard-link">Shubham Agiwal</div><span class="caret" style="color:white"></span>
+							</a>
+							<ul class="dropdown-menu">
+
+								<li>
+									<a href="./profilePage.html" class="dashboard-link">About Me</a>
+								</li>
+								<li>
+									<a href="./settings.html" class="dashboard-link">Settings</a>
+								</li>
+								<li>
+									<a href="./loginPage.html" class="dashboard-link">Log out</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+			</nav>
+
+			<div class="container-fluid" align="center" style="padding-top:50px">
+				<!-- type png - skhn change -->
+				<img src="img/logo.jpg" class="img-responsive">
+			</div>
+
+			<div class="row">
+				<form class="form-inline" >
+					<div class="form-group col-md-offset-4 col-md-8 col-xs-offset-2 col-sm-offset-2 col-xs-8 col-sm-8">
+						<div class="input-group col-xs-12 col-md-6 col-sm-12">
+							<span class="input-group-addon " id="basic-addon1">
+								<a href="#">
+									<span class="glyphicon glyphicon-search"></span>
+								</a>
+							</span>
+							<input type="text" class="form-control input-lg" placeholder="Find" aria-describedby="basic-addon1">
+						</div>
+					</div>		
+				</form>
+			</div>
+		</div>
+
+		<div class="row">
+			<h3 class="col-md-offset-5 col-xs-offset-5 col-sm-offset-5"> Top Reviews </h3>
+			<div class="col-md-offset-1 col-md-3 col-xs-offset-1 col-xs-11 col-sm-offset-1 col-sm-11">
+				<div class="thumbnail">
+					<img src="img/dashboard_1.jpeg" width="60px" height="60px" class="pull-left" style="margin: 0px 20px" align="middle" class="img-responsive">
+					<strong><a href="#">Shubham Agiwal</a> </strong><br>
+					<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span><strong> 100 </strong>
+					<div class="caption">
+						<br>Wrote a review for <a href="#">Liholiho Yacht Club Awesomeeeeeeee</a>
+						<h5 style="background-color:lightblue;"> Review </h5>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-calendar" style="padding: 0 0 0 20px;"></span>
+						<strong style="vertical-align:middle;"> 01/28/2012 </strong>
+						<p class="line-clamp">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar libero tristique sem sollicitudin, eget elementum nunc dapibus. Nullam et nunc maximus, rutrum turpis sit amet, ultricies sapien. Nunc laoreet fermentum rhoncus. Donec venenatis sapien non nulla euismod, et mollis risus viverra. Quisque sed massa ac quam mollis consequat eu id quam. Quisque dapibus est non nulla venenatis egestas. Etiam finibus eu libero sit amet luctus. Etiam vehicula pretium luctus. Aliquam erat volutpat.
+
+							Ut sed luctus nisl, quis fermentum odio. Aliquam ligula dui, cursus non congue tempor, venenatis sit amet dolor. Morbi vel eros a ante varius cursus. Phasellus pretium nulla at metus ultricies ultricies. Nullam blandit tincidunt metus, a volutpat massa consectetur sit amet. Sed vestibulum, augue ac finibus ullamcorper, lacus lacus porta eros, feugiat elementum velit lorem eu nibh. Donec nec nisl leo. Maecenas porttitor commodo iaculis. Vivamus diam risus, tincidunt et tortor sit amet, pharetra interdum diam.
+						</p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-offset-1 col-md-3 col-xs-offset-1 col-xs-11 col-sm-offset-1 col-sm-11">
+				<div class="thumbnail">
+					<img src="img/dashboard_1.jpeg" width="60px" height="60px" class="pull-left" style="margin: 0px 20px" align="middle" class="img-responsive">
+					<strong><a href="#">Shubham Agiwal</a> </strong><br>
+					<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span><strong> 100 </strong>
+					<div class="caption">
+						<br>Wrote a review for <a href="#">Liholiho Yacht Club Awesomeeeeeeee</a>
+						<h5 style="background-color:lightblue;"> Review </h5>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-calendar" style="padding: 0 0 0 20px;"></span>
+						<strong style="vertical-align:middle;"> 01/28/2012 </strong>
+						<p class="line-clamp">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar libero tristique sem sollicitudin, eget elementum nunc dapibus. Nullam et nunc maximus, rutrum turpis sit amet, ultricies sapien. Nunc laoreet fermentum rhoncus. Donec venenatis sapien non nulla euismod, et mollis risus viverra. Quisque sed massa ac quam mollis consequat eu id quam. Quisque dapibus est non nulla venenatis egestas. Etiam finibus eu libero sit amet luctus. Etiam vehicula pretium luctus. Aliquam erat volutpat.
+
+							Ut sed luctus nisl, quis fermentum odio. Aliquam ligula dui, cursus non congue tempor, venenatis sit amet dolor. Morbi vel eros a ante varius cursus. Phasellus pretium nulla at metus ultricies ultricies. Nullam blandit tincidunt metus, a volutpat massa consectetur sit amet. Sed vestibulum, augue ac finibus ullamcorper, lacus lacus porta eros, feugiat elementum velit lorem eu nibh. Donec nec nisl leo. Maecenas porttitor commodo iaculis. Vivamus diam risus, tincidunt et tortor sit amet, pharetra interdum diam.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-offset-1 col-md-3 col-xs-offset-1 col-xs-11 col-sm-offset-1 col-sm-11">
+				<div class="thumbnail">
+					<img src="img/dashboard_1.jpeg" width="60px" height="60px" class="pull-left" style="margin: 0px 20px" align="middle" class="img-responsive">
+					<strong><a href="#">Shubham Agiwal</a> </strong><br>
+					<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span><strong> 100 </strong>
+					<div class="caption">
+						<br>Wrote a review for <a href="#">Liholiho Yacht Club Awesomeeeeeeee</a>
+						<h5 style="background-color:lightblue;"> Review </h5>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-calendar" style="padding: 0 0 0 20px;"></span>
+						<strong style="vertical-align:middle;"> 01/28/2012 </strong>
+						<p class="line-clamp">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar libero tristique sem sollicitudin, eget elementum nunc dapibus. Nullam et nunc maximus, rutrum turpis sit amet, ultricies sapien. Nunc laoreet fermentum rhoncus. Donec venenatis sapien non nulla euismod, et mollis risus viverra. Quisque sed massa ac quam mollis consequat eu id quam. Quisque dapibus est non nulla venenatis egestas. Etiam finibus eu libero sit amet luctus. Etiam vehicula pretium luctus. Aliquam erat volutpat.
+
+							Ut sed luctus nisl, quis fermentum odio. Aliquam ligula dui, cursus non congue tempor, venenatis sit amet dolor. Morbi vel eros a ante varius cursus. Phasellus pretium nulla at metus ultricies ultricies. Nullam blandit tincidunt metus, a volutpat massa consectetur sit amet. Sed vestibulum, augue ac finibus ullamcorper, lacus lacus porta eros, feugiat elementum velit lorem eu nibh. Donec nec nisl leo. Maecenas porttitor commodo iaculis. Vivamus diam risus, tincidunt et tortor sit amet, pharetra interdum diam.
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+
+		<div class="row">
+			<h3 class="col-md-offset-5 col-xs-offset-5 col-sm-offset-5"> Top Businesses </h3>
+			<div class="col-md-offset-1 col-md-3 col-xs-offset-1 col-xs-11 col-sm-offset-1 col-sm-11">
+				<div class="thumbnail">
+					<img src="img/dashboard_1.jpeg" style="margin: 0px 20px" align="middle" class="img-responsive">
+					<br>
+					<strong> <a href="#"><h4 class="text-center">Mexican Chipotele</h4></a> </strong>
+					<br>
+					<div class="caption">
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span> 8 Reviews<br>
+						Price Range:
+						<span class="glyphicon glyphicon-piggy-bank"></span>
+						<span class="glyphicon glyphicon-piggy-bank"></span>
+						<span class="glyphicon glyphicon-piggy-bank"></span>
+						<span class="glyphicon glyphicon-piggy-bank"></span>
+						<div class="line-clamp">Vietnamese, Sandwiches</div>
+						<span class="glyphicon glyphicon-fire"></span> Opened 12 days ago.
+					</div>
+				</div>
+			</div>
+
+
+			
+
+			<div class="col-md-offset-1 col-md-3 col-xs-offset-1 col-xs-11 col-sm-offset-1 col-sm-11">
+				<div class="thumbnail">
+					<img src="img/dashboard_1.jpeg" style="margin: 0px 20px" align="middle" class="img-responsive"> 
+					<br>
+					<strong> <a href="#"><h4 class="text-center">Mexican Chipotele</h4></a> </strong>
+					<br>
+					<div class="caption">
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span> 8 Reviews<br>
+						Price Range:
+						<span class="glyphicon glyphicon-piggy-bank"></span>
+						<span class="glyphicon glyphicon-piggy-bank"></span>
+						<span class="glyphicon glyphicon-piggy-bank"></span>
+						<span class="glyphicon glyphicon-piggy-bank"></span>
+						<div class="line-clamp">Vietnamese, Sandwiches</div>
+						<span class="glyphicon glyphicon-fire"></span> Opened 12 days ago.
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-offset-1 col-md-3 col-xs-offset-1 col-xs-11 col-sm-offset-1 col-sm-11">
+				<div class="thumbnail">
+					<img src="img/dashboard_1.jpeg" style="margin: 0px 20px" align="middle" class="img-responsive">
+					<br>
+					<strong> <a href="#"><h4 class="text-center">Mexican Chipotele</h4></a> </strong>
+					<br>
+					<div class="caption">
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span> 8 Reviews<br>
+						Price Range:
+						<span class="glyphicon glyphicon-piggy-bank"></span>
+						<span class="glyphicon glyphicon-piggy-bank"></span>
+						<span class="glyphicon glyphicon-piggy-bank"></span>
+						<span class="glyphicon glyphicon-piggy-bank"></span>
+						<div class="line-clamp">Vietnamese, Sandwiches</div>
+						<span class="glyphicon glyphicon-fire"></span> Opened 12 days ago.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<h3 class="col-md-offset-5 col-xs-offset-5 col-sm-offset-5"> Categories </h3>
+			<div class="col-md-offset-1 col-md-5 col-xs-offset-1 col-xs-11 col-sm-offset-1 col-sm-11">
+				<div class="thumbnail">
+					<a href="#">
+						<img src="img/restaurants_image.png" style="margin: 0px 20px" align="middle" class="img-responsive pull-left" height="60px" width="60px">
+						<h3>Restaurants</h3>
+					</a>
+					
+				</div>
+			</div>
+
+			<div class="col-md-offset-1 col-md-5 col-xs-offset-1 col-xs-11 col-sm-offset-1 col-sm-11">
+				<div class="thumbnail">
+					<a href="#">
+						<img src="img/nightlife.png" style="margin: 0px 20px" align="middle" class="img-responsive pull-left" height="60px" width="60px">
+						<h3>NightLife</h3>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-md-offset-1 col-md-5 col-xs-offset-1 col-xs-11 col-sm-offset-1 col-sm-11">
+				<div class="thumbnail">
+					<a href="#">
+						<img src="img/shopping.png" style="margin: 0px 20px" align="middle" class="img-responsive pull-left" height="60px" width="60px">
+						<h3>Shopping</h3>
+					</a>
+					
+				</div>
+			</div>
+
+			<div class="col-md-offset-1 col-md-5 col-xs-offset-1 col-xs-11 col-sm-offset-1 col-sm-11">
+				<div class="thumbnail">
+					<a href="#">
+
+						<img src="img/more_categories.png" style="margin: 0px 20px" align="middle" class="img-responsive pull-left" height="60px" width="60px">
+						<h3>More</h3>
+
+					</a>
+					
+				</div>
+			</div>
+		</div>
+
+
+
+
+	</body>
+
+	</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title> Business Metrics Page </title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/settings.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/settings.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/dashboard.css">
+	<script type="text/javascript" src="./js/canvasjs.min.js"></script>
+	<script type="text/javascript" src="./js/profile.js"></script>
+	<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+    google.charts.load('current', {packages: ['map']});
+    google.charts.setOnLoadCallback(drawMap);
+
+    function drawMap () {
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Address');
+      data.addColumn('string', 'Location');
+      data.addColumn('string', 'Marker')
+
+      data.addRows([
+        ['New York City NY, United States', 'New York',   'blue' ],
+        ['Scranton PA, United States',      'Scranton',   'green'],
+        ['Washington DC, United States',    'Washington', 'pink' ],
+        ['Philadelphia PA, United States',  'Philly',     'green'],
+        ['Pittsburgh PA, United States',    'Pittsburgh', 'green'],
+        ['Buffalo NY, United States',       'Buffalo',    'blue' ],
+        ['Baltimore MD, United States',     'Baltimore',  'pink' ],
+        ['Albany NY, United States',        'Albany',     'blue' ],
+        ['Allentown PA, United States',     'Allentown',  'green']
+      ]);
+      var url = 'https://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/';
+
+      var options = {
+        zoomLevel: 6,
+        showTooltip: true,
+        showInfoWindow: true,
+        useMapTypeControl: true,
+        icons: {
+          blue: {
+            normal:   url + 'Map-Marker-Ball-Azure-icon.png',
+            selected: url + 'Map-Marker-Ball-Right-Azure-icon.png'
+          },
+          green: {
+            normal:   url + 'Map-Marker-Push-Pin-1-Chartreuse-icon.png',
+            selected: url + 'Map-Marker-Push-Pin-1-Right-Chartreuse-icon.png'
+          },
+          pink: {
+            normal:   url + 'Map-Marker-Ball-Pink-icon.png',
+            selected: url + 'Map-Marker-Ball-Right-Pink-icon.png'
+          }
+        }
+      };
+      var map = new google.visualization.Map(document.getElementById('map_div'));
+
+      map.draw(data, options);
+    }
+	</script>
+
+</head>
+<body>
+	<div class="col-md-12 col-xs-12 col-sm-12">
+
+		<div class="row">
+			<div class="col-md-12 col-xs-12 col-sm-12">
+				<nav class="navbar navbar-absolute navbar-default">
+
+					<div class="container-fluid">
+
+						<div class="navbar-header">
+							<a href="./dashboardPage.html" class="navbar-left navbar-brand"><img src="img/logo.jpg" height="30px"></a>
+						</div>
+
+						<div>
+							<ul class="nav navbar-nav">
+								<li> <a href="#"> Restaurants </a> </li>
+								<li> <a href="#"> Night Life </a> </li>
+								<li> <a href="#"> Shopping </a> </li>
+								<li> <a href="#"> More </a> </li>
+							</ul> 
+
+							<form class="navbar-form navbar-left" id="navbar-form">
+								<div class="form-group">
+
+									<div class="input-group col-xs-9 col-sm-9">
+										<input type="text" class="form-control" placeholder="Find" aria-describedby="basic-addon1">
+
+										<span class="input-group-addon" id="basic-addon1">
+											<a href="#">
+												<span class="glyphicon glyphicon-search"></span>
+											</a>
+										</span>
+									</div>
+								</div>
+							</form>
+
+							<ul class="nav navbar-nav navbar-right">
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+										Shubham Agiwal<span class="caret" style="color:white"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="./profilePage.html">About Me</a></li>
+										<li><a href="./settings.html">Settings</a></li>
+										<li><a href="./loginPage.html">Log out</a></li>
+									</ul>
+								</li>
+							</ul> 
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<div class="container-fluid" style="background-color:#f5f5f5">
+			<div class="col-md-2 col-xs-12 col-sm-12">
+				<h4 class="text-justify">Restaurant</h4>
+				<a  class="text-center" href="#">American</a>
+				<br>
+				<a class="text-center" href="#">Chinese</a>
+				<br>
+				<a class="text-center" href="#">Mexican</a>
+				<br>
+				<a class="text-center" href="#">Indian</a>
+			</div>
+
+			<div class="col-md-2 col-xs-12 col-sm-12">
+				<h4 class="text-justify">Active Life</h4>
+				<a  class="text-center" href="#">Active Life</a>
+				<br>
+				<a class="text-center" href="#">Golf</a>
+				<br>
+				<a class="text-center" href="#">Gym</a>
+				<br>
+				<a class="text-center" href="#">Yoga</a>
+				<br>
+			</div>
+
+			<div class="col-md-2 col-xs-12 col-sm-12">
+				<h4 class="text-justify">Shopping</h4>
+				<a  class="text-center" href="#">Fashion</a>
+				<br>
+				<a class="text-center" href="#">Bookstore</a>
+				<br>
+			</div>
+
+			<div class="col-md-2 col-xs-12 col-sm-12">
+				<h4 class="text-justify">Nightlife</h4>
+				<a class="text-center" href="#">Bar</a>
+				<br>
+				<a class="text-center" href="#">Wine Bar</a>
+			</div>
+
+			<div class="col-md-2 col-xs-12 col-sm-12">
+				<h4 class="text-justify">Automotive</h4>
+				<a class="text-center" href="#">Car Wash</a>
+				<br>
+				<a class="text-center" href="#">Gas & Service Station</a>
+				<br>
+				<a class="text-center" href="#">Car Dealer</a>
+			</div>
+
+			<div class="col-md-2 col-xs-12 col-sm-12">
+				<h4 class="text-justify">Beauty & Spa</h4>
+				<a class="text-center" href="#">Hair Salon</a>
+				<br>
+				<a class="text-center" href="#">Tattoo</a>
+				<br>
+			</div>
+
+		</div>
+
+		<div class="container-fluid" style="background-color:#f5f5f5">
+			<br>
+			<div class="col-md-2 col-xs-12 col-sm-12">
+				<h4 class="text-justify">Price </h4>
+				<form name="myForm">
+
+					<div class="checkbox">
+						<label><input type="checkbox" value=""><span class="fa fa-usd"></span></label>
+					</div>
+
+					<div class="checkbox">
+						<label><input type="checkbox" value=""><span class="fa fa-usd"></span><span class="fa fa-usd"></span></label>
+					</div>
+
+					<div class="checkbox">
+						<label><input type="checkbox" value=""><span class="fa fa-usd"></span><span class="fa fa-usd"></span><span class="fa fa-usd"></span></label>
+					</div>
+
+					<div class="checkbox">
+						<label><input type="checkbox" value=""><span class="fa fa-usd"></span><span class="fa fa-usd"></span><span class="fa fa-usd"></span><span class="fa fa-usd"></span></label>
+					</div>
+
+				</form>
+
+			</div>
+
+			<div class="col-md-2 col-xs-12 col-sm-12">
+				<h4 class="text-justify">Sort By</h4>
+				<a class="text-center" href="#">Highest Rated</a>
+				<br>
+				<a class="text-center" href="#">Most Reviewed</a>
+				<br>
+			</div>
+
+			<div class="col-md-2 col-xs-12 col-sm-12">
+				<h4 class="text-justify">Other Tags</h4>
+				<a class="text-center" href="#">Fast Food</a>
+				<br>
+				<a class="text-center" href="#">Cafeteria</a>
+				<br>
+				<a class="text-center" href="#">Cafe</a>
+				<br>
+				<a class="text-center" href="#">Barbeque</a>
+				<br>
+			</div>
+
+			<div class="col-md-2 col-xs-12 col-sm-12">
+				<h4 class="text-justify">Other Tags</h4>
+				<a class="text-center" href="#">Fast Food</a>
+				<br>
+				<a class="text-center" href="#">Cafeteria</a>
+				<br>
+				<a class="text-center" href="#">Cafe</a>
+				<br>
+				<a class="text-center" href="#">Barbeque</a>
+				<br>
+			</div>
+
+			<div class="col-md-2 col-xs-12 col-sm-12">
+				<h4 class="text-justify">Other Tags</h4>
+				<a class="text-center" href="#">Burger</a>
+				<br>
+				<a class="text-center" href="#">Hot Dog</a>
+				<br>
+				<a class="text-center" href="#">Pizza</a>
+				<br>
+				<a class="text-center" href="#">Salad</a>
+				<br>
+			</div>
+
+			<div class="col-md-2 col-xs-12 col-sm-12">
+				<h4 class="text-justify">Other Tags</h4>
+				<a class="text-center" href="#">Dance Studio</a>
+				<br>
+				<a class="text-center" href="#">Museum</a>
+				<br>
+				<a class="text-center" href="#">Cinema</a>
+				<br>
+				<a class="text-center" href="#">Real Estate</a>
+				<br>
+			</div>
+
+		</div>
+
+		<br>
+
+		<div class="row">
+
+			<h4 class="text-center"> Search Results</h4>
+
+			<div class="col-xs-12 col-sm-offset-1 col-sm-6 col-md-offset-1 col-md-6 ">
+				<div>
+						<ul class="list-group ">
+										<li class="list-group-item">
+											
+										<img src="img/dashboard_1.jpeg" width="90px" height="90px" class="pull-left" style="margin: 0px 20px" align="middle" class="img-responsive">
+										<strong><a href="#">Mexican Chipotele</a> </strong><br>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										100 Reviews
+										<div class="line-clamp"><b>Vietnamese, Sandwiches </b></div>
+										
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+
+										<br>
+										<br>
+
+										<b>Address:</b>Lower Nob Hill
+												 871 Sutter St
+												 San Francisco, CA 94109
+										<br>
+									    <b>Phone number: </b> (415) 440-5446
+
+										</li>
+										<li class="list-group-item">
+											<img src="img/dashboard_1.jpeg" width="90px" height="90px" class="pull-left" style="margin: 0px 20px" align="middle" class="img-responsive">
+										<strong><a href="#">Mexican Chipotele</a> </strong><br>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										100 Reviews
+										<div class="line-clamp"><b>Vietnamese, Sandwiches </b></div>
+										
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+
+										<br>
+										<br>
+
+										<b>Address:</b>Lower Nob Hill
+												 871 Sutter St
+												 San Francisco, CA 94109
+										<br>
+									    <b>Phone number: </b> (415) 440-5446
+
+										</li>
+										<li class="list-group-item">
+											<img src="img/dashboard_1.jpeg" width="90px" height="90px" class="pull-left" style="margin: 0px 20px" align="middle" class="img-responsive">
+										<strong><a href="#">Mexican Chipotele</a> </strong><br>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										100 Reviews
+										<div class="line-clamp"><b>Vietnamese, Sandwiches </b></div>
+										
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+
+										<br>
+										<br>
+
+										<b>Address:</b>Lower Nob Hill
+												 871 Sutter St
+												 San Francisco, CA 94109
+										<br>
+									    <b>Phone number: </b> (415) 440-5446
+
+										</li>
+										<li class="list-group-item">
+											<img src="img/dashboard_1.jpeg" width="90px" height="90px" class="pull-left" style="margin: 0px 20px" align="middle" class="img-responsive">
+										<strong><a href="#">Mexican Chipotele</a> </strong><br>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										100 Reviews
+										<div class="line-clamp"><b>Vietnamese, Sandwiches </b></div>
+										
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+
+										<br>
+										<br>
+
+										<b>Address:</b>Lower Nob Hill
+												 871 Sutter St
+												 San Francisco, CA 94109
+										<br>
+									    <b>Phone number: </b> (415) 440-5446
+
+										</li>
+										<li class="list-group-item">
+											<img src="img/dashboard_1.jpeg" width="90px" height="90px" class="pull-left" style="margin: 0px 20px" align="middle" class="img-responsive">
+										<strong><a href="#">Mexican Chipotele</a> </strong><br>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										<span class="glyphicon glyphicon-star" style="vertical-align:middle"></span>
+										100 Reviews
+										<div class="line-clamp"><b>Vietnamese, Sandwiches </b></div>
+										
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+										<i class="fa fa-usd" aria-hidden="true"></i>
+
+										<br>
+										<br>
+
+										<b>Address:</b>Lower Nob Hill
+												 871 Sutter St
+												 San Francisco, CA 94109
+										<br>
+									    <b>Phone number: </b> (415) 440-5446
+
+										</li>
+						</ul>
+
+				</div>
+			</div>
+
+
+			<div class="col-xs-12 col-sm-offset-1 col-sm-4 col-md-offset-1 col-md-4" >
+				 <div id="map_div"></div>
+		    </div>
+
+   </div>
+
+   <nav class="text-center" aria-label="Page navigation">
+					<ul class="pagination">
+						<li>
+							<a href="#" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li>
+							<a href="#" aria-label="Next">
+								<span aria-hidden="true">&raquo;</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+ </body>
+ </html>

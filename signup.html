@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title> The SignUp page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/signup.js"></script>
+</head>
+<body>
+  <div class="container"> 
+   <div class="row">
+     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+
+       <div align="middle">
+        <img src="img/logo.jpg" >
+      </div>
+
+      <div class="panel panel-primary" style="margin-top:5%">
+        <div class="panel-heading" style="text-align:center">
+          Sign Up for Glocal
+        </div>
+
+        <div class="panel-body">
+          <div style="text-align:center"> <b> Already to Glocal? </b> <a href="loginPage.html"> Login </a> </div>
+
+          <form role="form">
+
+            <div class="form-group">
+             <label for="Name"> Name </label>
+             <input type="text" name="name" placeholder="Name" class="form-control input-lg">
+           </div>
+
+           <div class="form-group">
+             <label for="email"> Email </label>
+             <input type="email" name="email" placeholder="Email Id" class="form-control input-lg">
+           </div>
+
+           <div class="form-group">
+             <label for="password"> Password </label>
+             <input type="password" name="password" placeholder="Password" class="form-control input-lg">
+           </div>
+
+           <div class="form-group">
+            <label for="City"> City </label>       
+            <select class="form-control input-lg" name="city">
+              <option></option>
+              <option>Edinburgh</option>
+              <option>Karlsruhe</option>
+              <option>Montreal</option>
+              <option>Waterloo</option>
+              <option>Pittsburgh</option>
+              <option>Charlotte</option>
+              <option>Urbana-Champaign</option>
+              <option>Phoenix</option>
+              <option>Las Vegas</option>
+              <option>Madison</option>
+              <option>Cleveland</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+           <label for="Country"> Country </label>
+           <select class="form-control input-lg" name="Country">
+              <option></option>
+              <option>U.K</option>
+              <option>Germany</option>
+              <option>Canada</option>
+              <option>US</option>
+            </select>
+         </div>
+
+         <div class="form-group">
+           <a href="./dashboardPage.html" class="btn btn-lg btn-success btn-block">Register
+           </a>
+         </div>
+
+               <!-- <div class="form-group">
+                 <input type="button" value="Login" class="btn btn-success btn-block btn-lg" id="Login">
+               </div> -->
+
+             </form>
+
+           </div>
+
+         </div>
+
+         
+       </div>
+     </div>
+   </div>
+
+ </body>
+
+ </html>
